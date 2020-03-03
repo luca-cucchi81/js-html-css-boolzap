@@ -117,10 +117,9 @@ body:after{
 .users-contact {
   width: 100%;
   background-color: white;
-  overflow-y: scroll;
-  flex-grow: 1;
-
+  overflow-y: auto;
 }
+
 .user{
     width: 100%;
     height: 80px;
@@ -195,6 +194,60 @@ body:after{
     width: 100%;
     height: 80%;
     background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    display: flex;
+}
+
+.received,
+.sent {
+    width: 50%;
+	display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.speech-bubble-received{
+    padding: 20px 50px;
+    background: #ffffff;
+	border-radius: .4em;
+    position: relative;
+}
+
+.speech-bubble-received:after {
+	content: '';
+	position: absolute;
+	left: 15%;
+	top: 30%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #ffffff;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -18px;
+	margin-left: -36px;
+}
+.speech-bubble-sent{
+    margin-bottom: 20px;
+    padding: 20px 50px;
+    background: #00aabb;
+	border-radius: .4em;
+    position: relative;
+}
+
+.speech-bubble-sent:after {
+	content: '';
+	position: absolute;
+	left: 15%;
+	top: 30%;
+	width: 0;
+	height: 0;
+	border: 20px solid transparent;
+	border-right-color: #00aabb;
+	border-left: 0;
+	border-top: 0;
+	margin-top: -18px;
+	margin-left: -36px;
 }
 
 .message-bar{
@@ -203,6 +256,7 @@ body:after{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 0 10px;
 }
 
 .message-bar span{
