@@ -157,7 +157,7 @@ body:after{
     display: flex;
     flex-direction: column;
 }
-
+/*stile x barra contatto con cui si chatta*/
 .header-chat{
     width: 100%;
     height: 80px;
@@ -188,8 +188,9 @@ body:after{
     font-size: 20px;
     padding: 10px;
     color: #99A1A1;
+    cursor: pointer;
 }
-
+/*stile per chat principale*/
 .main-chat{
     width: 100%;
     height: 80%;
@@ -253,7 +254,7 @@ body:after{
     margin-top: -10px;
     margin-right: -20px;
 }
-
+/*stile x sez. invio messaggio in chat*/
 .message-bar{
     width: 100%;
     height: 80px;
@@ -267,6 +268,7 @@ body:after{
     font-size: 30px;
     padding: 10px;
     color: #99A1A1;
+    cursor: pointer;
 }
 
 .message-bar input{
