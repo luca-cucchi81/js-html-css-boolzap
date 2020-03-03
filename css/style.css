@@ -71,7 +71,7 @@ body:after{
     background-color: #81DAF5;
     display: flex;
     align-items: center;
-    padding-left: 10px;
+    padding: 10px;
 }
 
 .banner span {
