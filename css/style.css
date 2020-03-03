@@ -68,12 +68,15 @@ body:after{
     height: 80px;
     background-color: #81DAF5;
     display: flex;
-    justify-content: space-evenly;
     align-items: center;
+    padding-left: 10px;
 }
 
+.banner span {
+    padding-left: 10px;
+}
 .banner i{
-    font-size: 2em;
+    font-size: 20px;
     color: #81DAF5;
     background-color: white;
     border-radius: 100%;
@@ -119,15 +122,25 @@ body:after{
 .user{
     width: 100%;
     height: 80px;
-    background: yellow;
     display: flex;
     align-items: center;
-    border-bottom: 1px solid #D8D8D8;
 }
 .user img {
     height: 50px;
     border-radius: 50%;
     padding: 0 10px;
+}
+
+.text-user p{
+    font-size: small;
+    color: grey;
+}
+
+.users-contact-time {
+  font-size: small;
+  color: grey;
+  padding-left: 70px;
+  padding-bottom: 20px;
 }
 
 /* stile colonna messaggi dx */
