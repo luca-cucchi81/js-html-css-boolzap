@@ -34,6 +34,10 @@ body:after{
     display: flex;
 }
 
+::-webkit-scrollbar {
+    display:none;
+}
+
 /* == INIZIO STILE PER BARRA SX==*/
 
 .left-column{
@@ -196,6 +200,7 @@ body:after{
     height: 80%;
     padding: 0 60px;
     background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    overflow-y: auto;
 }
 
 .received{
@@ -214,6 +219,7 @@ body:after{
 }
 
 .speech-bubble-received{
+    margin-bottom: 20px;
     padding: 20px 50px;
     background: #ffffff;
 	border-radius: .4em;
