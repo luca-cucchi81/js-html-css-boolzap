@@ -150,11 +150,71 @@ body:after{
 
 /*== FINE STILE PER BARRA SX==*/
 
-/* stile colonna messaggi dx */
+/*==INIZIO STILE PER BARRA DX==*/
 .right-column{
     width: 70%;
     height: 100%;
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
+}
+
+.header-chat{
+    width: 100%;
+    height: 80px;
+    padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+}
+.chat-contact{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chat-contact img{
+    height: 90%;
+    margin: 10px 10px;
+}
+
+.chat-contact p{
+    font-size: 14px;
+    font-weight: 700;
+    color: grey;
+}
+
+.header-chat-icons i{
+    font-size: 20px;
+    padding: 10px;
+    color: #99A1A1;
+}
+
+.main-chat{
+    width: 100%;
+    height: 80%;
+    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+}
+
+.message-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.message-bar span{
+    font-size: 30px;
+    padding: 10px;
+    color: #99A1A1;
+}
+
+.message-bar input{
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    color: #99A1A1;
+    border: none;
 }
