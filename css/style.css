@@ -29,7 +29,7 @@ body:after{
 .container{
     width: 60vw;
     margin: 20px auto;
-    height: 100vh;
+    height: 75vh;
     background-color: #ffffff;
     display: flex;
 }
@@ -37,15 +37,14 @@ body:after{
 /* stile colonna utenti sx */
 .left-column{
     width: 30%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     border-right: 1px solid #D8D8D8;
 }
-
-.header-user{        /*stile per sex utente*/
+ /*stile colonna sx - sez. utente*/
+.header-user{
     width: 100%;
-    height: 60px;
+    height: 80px;
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
@@ -63,8 +62,8 @@ body:after{
     padding: 0 10px;
     color: #99A1A1;
 }
-
-.banner{        /*stile banner notifiche*/
+/*stile colonna sx - banner notifiche*/
+.banner{
     width: 100%;
     height: 80px;
     background-color: #81DAF5;
@@ -108,6 +107,29 @@ body:after{
     border: 1px solid #D8D8D8;
     border-radius: 30px;
 }
+
+/*stile colonna sx - lista contatti*/
+.users-contact {
+  width: 100%;
+  background-color: white;
+  overflow-y: scroll;
+  flex-grow: 1;
+
+}
+.user{
+    width: 100%;
+    height: 80px;
+    background: yellow;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+}
+.user img {
+    height: 50px;
+    border-radius: 50%;
+    padding: 0 10px;
+}
+
 /* stile colonna messaggi dx */
 .right-column{
     width: 70%;
