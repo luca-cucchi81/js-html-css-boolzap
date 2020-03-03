@@ -133,6 +133,9 @@ body:after{
     padding: 0 10px;
 }
 
+.text-user h3{
+    font-size: 18px;
+}
 .text-user p{
     font-size: small;
     color: grey;
