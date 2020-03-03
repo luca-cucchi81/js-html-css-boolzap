@@ -194,21 +194,27 @@ body:after{
 .main-chat{
     width: 100%;
     height: 80%;
+    padding: 0 60px;
     background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
-    display: flex;
 }
 
-.received,
-.sent {
-    width: 50%;
+.received{
+    width: 100%;
 	display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+.sent {
+    width: 100%;
+	display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     padding-top: 40px;
 }
 
 .speech-bubble-received{
-    padding: 15px 50px;
+    padding: 20px 50px;
     background: #ffffff;
 	border-radius: .4em;
     position: relative;
@@ -230,9 +236,18 @@ body:after{
     margin-top: -10px;
     margin-left: -20px;
 }
+.speech-bubble-received time,
+.speech-bubble-sent time{
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    font-size: small;
+    color: grey;
+}
+
 .speech-bubble-sent{
     margin-bottom: 20px;
-    padding: 15px 50px;
+    padding: 20px 50px;
     background: #25d366;
 	border-radius: .4em;
     position: relative;
