@@ -123,6 +123,7 @@ body:after{
   background-color: white;
   overflow-y: auto;
   scrollbar-width: thin;
+  scrollbar-color: #25d366 #ffffff;
 }
 
 .user{
