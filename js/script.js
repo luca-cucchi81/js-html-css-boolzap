@@ -14,13 +14,13 @@ $('#invia').click(function(){
 
     var messaggio = $('.box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)
     messaggio.find('.testo-bubble-sent').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
-    messaggio.find('.time-sent').text(time); //aggiungo ora
+    messaggio.find('.time-sent').text(orario()); //aggiungo ora
     $('.main-chat').append(messaggio); // creo cascata messaggi nella main chat
 
 setTimeout(function(){
     var risposta = $('.box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
     risposta.find('.testo-bubble-received').text(risposteRandom[randomNum(risposteRandom.length)]); //modif. testo risposta che e inserimento nel bubble
-    risposta.find('.time-received').text(time); //aggiungo ora
+    risposta.find('.time-received').text(orario()); //aggiungo ora
     $('.main-chat').append(risposta); // creo cascata messaggi nella main chat
 }, 1000)
 });
@@ -55,7 +55,10 @@ function randomNum(num) {
 }
 
 //orario per messaggi
+function orario(){
 var data = new Date();
 var hours = (data.getHours());
 var minutes = (data.getMinutes());
 var time = hours + ':' + minutes;
+return time
+}
