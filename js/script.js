@@ -1,7 +1,15 @@
+//cambio icona mentre scrivo il messaggio
+('#messaggio').keyup(function(){
+    $('.fa-microphone').addClass('hidden')
+    $('.fa-paper-plane').removeClass('hidden')
+});
+
 
 $('#invia').click(function(){
+    $('.fa-microphone').removeClass('hidden')   // cambio icona una volta inviato messaggio
+    $('.fa-paper-plane').addClass('hidden')
+
     var messaggioInput = $('#messaggio').val();
-console.log(messaggioInput);
     $('#messaggio').val('');
 
     var messaggio = $('.box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)

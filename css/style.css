@@ -316,3 +316,7 @@ body:after{
 .box-received{
     display: none;
 }
+
+.hidden{
+    display: none;
+}
