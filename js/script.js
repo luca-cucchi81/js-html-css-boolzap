@@ -19,12 +19,20 @@ $('#invia').click(function(){
 
 setTimeout(function(){
     var risposta = $('.box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
-    risposta.find('.testo-bubble-received').text('OK!!'); //modif. testo risposta che e inserimento nel bubble
+    risposta.find('.testo-bubble-received').text(risposteRandom[randomNum(risposteRandom.length)]); //modif. testo risposta che e inserimento nel bubble
     risposta.find('.time-received').text('05:05'); //aggiungo ora
     $('.main-chat').append(risposta); // creo cascata messaggi nella main chat
 }, 1000)
 });
 
+var risposteRandom =[       // risposte random su invio messaggio
+    'A dopo.',
+    'A che ora ci vediamo?',
+    'Oggi non ci sono!',
+    'Ti ricordi l\'appuntamento?',
+    'Tutto annullato.',
+    'Non posso rispondere ora, ti chiamo dopo!'
+];
 
 $('#cerca-contatti').keyup(function(event){
     var filtro = $(this).val().toLowerCase();
@@ -37,3 +45,11 @@ $('#cerca-contatti').keyup(function(event){
         }
     });
 })
+
+/*FUNZIONI GENERICHE*/
+
+// Genera un numero random
+function randomNum(num) {
+  var random = Math.floor(Math.random() * (num));
+  return random;
+}
