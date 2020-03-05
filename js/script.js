@@ -57,8 +57,16 @@ function randomNum(num) {
 //orario per messaggi
 function orario(){
 var data = new Date();
-var hours = (data.getHours());
-var minutes = (data.getMinutes());
+var hours = addZero(data.getHours());
+var minutes = addZero(data.getMinutes());
 var time = hours + ':' + minutes;
 return time
+}
+
+// Aggiunge zero
+function addZero(num) {
+  if (num < 10) {
+    num = '0' + num;
+  }
+  return num;
 }
