@@ -207,6 +207,10 @@ body:after{
     scrollbar-color: #25d366 #ffffff;
 }
 
+.d_flex {
+  display: flex;
+}
+
 .received{
     width: 100%;
 	display: flex;
@@ -309,5 +313,9 @@ body:after{
 }
 
 .template{
+    display: none;
+}
+
+.template2{
     display: none;
 }
