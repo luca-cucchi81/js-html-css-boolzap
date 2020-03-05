@@ -126,13 +126,13 @@ body:after{
   scrollbar-color: #25d366 #ffffff;
 }
 
-.user{
+.utente{
     width: 100%;
     height: 80px;
     display: flex;
     align-items: center;
 }
-.user img {
+.utente img {
     height: 50px;
     border-radius: 50%;
     padding: 0 10px;
@@ -207,26 +207,24 @@ body:after{
     scrollbar-color: #25d366 #ffffff;
 }
 
-.d_flex {
-  display: flex;
+.template {
+    width: 100%;
+	display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
 }
 
-.received{
+.template2{
     width: 100%;
 	display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    justify-content: flex-start;
+    align-content: center;
     padding-top: 40px;
 }
-.sent {
-    width: 100%;
-	display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-top: 40px;
-}
+
 
 .speech-bubble-received{
+    float: left;
     margin-bottom: 20px;
     padding: 20px 50px;
     background: #ffffff;
@@ -261,6 +259,9 @@ body:after{
 }
 
 .speech-bubble-sent{
+    float:right;
+    display: flex;
+    justify-content: flex-end;
     margin-bottom: 20px;
     padding: 20px 50px;
     background: #25d366;
@@ -312,10 +313,7 @@ body:after{
     border: none;
 }
 
-.template{
-    display: none;
-}
-
+.template,
 .template2{
     display: none;
 }
