@@ -26,12 +26,12 @@ setTimeout(function(){
 });
 
 var risposteRandom =[       // risposte random su invio messaggio
-    'A dopo.',
+    'A dopo!',
     'A che ora ci vediamo?',
     'Oggi non ci sono!',
     'Ti ricordi l\'appuntamento?',
-    'Tutto annullato.',
-    'Non posso rispondere ora, ti chiamo dopo!'
+    'Finalmente ti fai sentire!!',
+    'Non posso rispondere ora, scusa!'
 ];
 
 $('#cerca-contatti').keyup(function(event){
