@@ -46,6 +46,15 @@ $('#cerca-contatti').keyup(function(event){
     });
 })
 
+$('.utente').click(function(){      //cambia utente in chat al click su uno dei contatti
+    var imgSelected = $(this).find('img').attr('src');
+    var nameSelected = $(this).find('h3').text();
+    $('.chat-contact').find('img').attr('src', imgSelected);
+    $('.chat-contact').find('h3').text(nameSelected);
+    $('.chat-contact').find('p').text('Online');
+});
+
+
 /*FUNZIONI GENERICHE*/
 
 // Genera un numero random
