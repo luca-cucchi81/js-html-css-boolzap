@@ -1,17 +1,18 @@
 
 $('#invia').click(function(){
     var messaggioInput = $('#messaggio').val();
+console.log(messaggioInput);
     $('#messaggio').val('');
 
-    var messaggio = $('.box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il template (che è display none)
-    messaggio.children('.testo-bubble-sent').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
-    messaggio.children('.time-sent').text('05:05'); //aggiungo ora
+    var messaggio = $('.box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)
+    messaggio.find('.testo-bubble-sent').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
+    messaggio.find('.time-sent').text('05:05'); //aggiungo ora
     $('.main-chat').append(messaggio); // creo cascata messaggi nella main chat
 
 setTimeout(function(){
-    var risposta = $('.box-received .template2').clone(); //copia contenuto rispostao che è dentro il template (che è display none)
-    risposta.children('.testo-bubble-received').text('OK!!'); //modif. testo risposta che e inserimento nel bubble
-    risposta.children('.time-received').text('05:05'); //aggiungo ora
+    var risposta = $('.box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
+    risposta.find('.testo-bubble-received').text('OK!!'); //modif. testo risposta che e inserimento nel bubble
+    risposta.find('.time-received').text('05:05'); //aggiungo ora
     $('.main-chat').append(risposta); // creo cascata messaggi nella main chat
 }, 1000)
 });
