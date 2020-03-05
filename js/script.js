@@ -1,5 +1,14 @@
+//cambio icona mentre scrivo il messaggio
+$('#messaggio').keyup(function(){
+    $('.fa-microphone').addClass('hidden')
+    $('.fa-paper-plane').removeClass('hidden')
+});
+
 
 $('#invia').click(function(){
+    $('.fa-microphone').removeClass('hidden')   // cambio icona una volta inviato messaggio
+    $('.fa-paper-plane').addClass('hidden')
+
     var messaggioInput = $('#messaggio').val();
     $('#messaggio').val('');
 
