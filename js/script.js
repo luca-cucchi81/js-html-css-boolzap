@@ -75,7 +75,7 @@ function invioRicezione(){
 
     var messaggio = $('.active .box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)
     messaggio.find('p').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
-    messaggio.find('.active .time-sent').text(orario()); //aggiungo ora
+    messaggio.find('.time-sent').text(orario()); //aggiungo ora
     $('.active').append(messaggio); // creo cascata messaggi nella main chat
 
     setTimeout(function(){
