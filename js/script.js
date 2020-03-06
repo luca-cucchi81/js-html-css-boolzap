@@ -13,21 +13,7 @@ $('#messaggio').focus(function(){
 $('#invia').click(function(){
     $('.fa-microphone').removeClass('hidden')   // cambio icona una volta inviato messaggio
     $('.fa-paper-plane').addClass('hidden')
-
-    var messaggioInput = $('#messaggio').val();
-    $('#messaggio').val('');
-
-    var messaggio = $('.box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)
-    messaggio.find('.testo-bubble-sent').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
-    messaggio.find('.time-sent').text(orario()); //aggiungo ora
-    $('.main-chat').append(messaggio); // creo cascata messaggi nella main chat
-
-setTimeout(function(){
-    var risposta = $('.box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
-    risposta.find('.testo-bubble-received').text(risposteRandom[randomNum(risposteRandom.length)]); //modif. testo risposta che e inserimento nel bubble
-    risposta.find('.time-received').text(orario()); //aggiungo ora
-    $('.main-chat').append(risposta); // creo cascata messaggi nella main chat
-}, 1000)
+    invioRicezione();
 });
 
 var risposteRandom =[       // risposte random su invio messaggio
@@ -68,7 +54,24 @@ $('.utente').click(function(){
 });
 
 
-/*FUNZIONI GENERICHE*/
+/*FUNZIONI*/
+
+function invioRicezione(){
+    var messaggioInput = $('#messaggio').val();
+    $('#messaggio').val('');
+
+    var messaggio = $('.box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)
+    messaggio.find('.testo-bubble-sent').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
+    messaggio.find('.time-sent').text(orario()); //aggiungo ora
+    $('.main-chat').append(messaggio); // creo cascata messaggi nella main chat
+
+    setTimeout(function(){
+        var risposta = $('.box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
+        risposta.find('.testo-bubble-received').text(risposteRandom[randomNum(risposteRandom.length)]); //modif. testo risposta che e inserimento nel bubble
+        risposta.find('.time-received').text(orario()); //aggiungo ora
+        $('.main-chat').append(risposta); // creo cascata messaggi nella main chat
+    }, 1000)
+}
 
 // Genera un numero random
 function randomNum(num) {
