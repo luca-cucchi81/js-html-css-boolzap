@@ -59,7 +59,18 @@ $('.utente').click(function(){
     $(chatId).addClass('active');
 });
 
-
+$(document).on('click', '.speech-bubble-sent', function(){
+    $(this).find('.dropdown-sent').slideDown(500);
+    $('.main-chat').click(function(){
+        $('.dropdown-sent').hide();
+    });
+});
+$(document).on('click', '.speech-bubble-received', function(){
+    $(this).find('.dropdown-received').slideDown(500);
+    $('.main-chat').click(function(){
+        $('.dropdown-received').hide();
+    });
+});
 
 /*FUNZIONI*/
 // Invio messaggio
