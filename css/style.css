@@ -132,6 +132,10 @@ body:after{
     display: flex;
     align-items: center;
 }
+
+.utente:hover{
+    background-color: rgba(37,211,102,0.48)
+}
 .utente img {
     height: 50px;
     border-radius: 50%;
@@ -201,7 +205,7 @@ body:after{
     width: 100%;
     height: 80%;
     padding: 0 60px;
-    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2Foriginals%2Fa8%2Fd8%2F3a%2Fa8d83ad51cfb486d253508b013d54fb9.jpg&f=1&nofb=1');
+    background-image: url('https://fsb.zobj.net/crop.php?r=sEgoYzFox9nu05-Z038Pe5hqtlSvcgCH0K2gF8gggQjIz1nS56tYS0oiTN48smT_eBTFwSoJ6DiC3UCXjInbRR1ywRiLLV110DNIiKBkXNwg0RoWOrtyT7p7dw1iYecetOAZfxoeBY86dSXo');
     background-repeat: no-repeat;
     background-size: cover;
     overflow: auto;
@@ -266,7 +270,7 @@ body:after{
 .speech-bubble-sent{
     margin-bottom: 20px;
     padding: 20px 50px;
-    background: #25d366;
+    background: rgb(37,211,102);
 	border-radius: .4em;
     position: relative;
     font-size: 16px;
@@ -282,7 +286,7 @@ body:after{
     width: 0;
     height: 0;
     border: 20px solid transparent;
-    border-left-color: #25d366;
+    border-left-color: rgb(37,211,102);
     border-right: 0;
     border-bottom: 0;
     margin-top: -10px;

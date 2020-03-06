@@ -1,6 +1,6 @@
 //cambio icona su focus barra messaggi
     $('#messaggio').focus(function(){
-        $(this).css({'background-color': '#99a1a1', 'color': '#fff', 'border-radius': '30px'});
+        $(this).css({'background-color': 'rgba(37,211,102,0.48)', 'color': 'black', 'border-radius': '30px'});
         $('.fa-microphone').addClass('hidden');
         $('.fa-paper-plane').removeClass('hidden');
     }).blur(function(){
