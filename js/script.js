@@ -1,8 +1,11 @@
-//cambio icona mentre scrivo il messaggio
-$('#messaggio').keyup(function(){
+//cambio icona su focus barra messaggi
+$('#messaggio').focus(function(){
     $('.fa-microphone').addClass('hidden')
     $('.fa-paper-plane').removeClass('hidden')
-});
+}).blur(function(){
+    $('.fa-microphone').removeClass('hidden')
+    $('.fa-paper-plane').addClass('hidden')
+})
 
 
 $('#invia').click(function(){
