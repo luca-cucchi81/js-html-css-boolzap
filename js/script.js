@@ -1,19 +1,25 @@
 //cambio icona su focus barra messaggi
-$('#messaggio').focus(function(){
-    $(this).css({'background-color': '#99a1a1', 'color': '#fff', 'border-radius': '30px'});
-    $('.fa-microphone').addClass('hidden');
-    $('.fa-paper-plane').removeClass('hidden');
-}).blur(function(){
-    $(this).css({'background-color': '#fff', 'color': '#102e30'});
-    $('.fa-microphone').removeClass('hidden');
-    $('.fa-paper-plane').addClass('hidden');
-})
-
+    $('#messaggio').focus(function(){
+        $(this).css({'background-color': '#99a1a1', 'color': '#fff', 'border-radius': '30px'});
+        $('.fa-microphone').addClass('hidden');
+        $('.fa-paper-plane').removeClass('hidden');
+    }).blur(function(){
+        $(this).css({'background-color': '#fff', 'color': '#102e30'});
+        $('.fa-microphone').removeClass('hidden');
+        $('.fa-paper-plane').addClass('hidden');
+    })
 
 $('#invia').click(function(){
-    $('.fa-microphone').removeClass('hidden')   // cambio icona una volta inviato messaggio
-    $('.fa-paper-plane').addClass('hidden')
-    invioRicezione();
+    invioMsg();
+});
+$('#messaggio').keypress(function(event){
+    $('.fa-microphone').addClass('hidden');
+    $('.fa-paper-plane').removeClass('hidden');
+    if (event.key == 'Enter'){
+        $('.fa-microphone').removeClass('hidden');
+        $('.fa-paper-plane').addClass('hidden');
+        invioMsg();
+    }
 });
 
 var risposteRandom =[       // risposte random su invio messaggio
@@ -55,7 +61,14 @@ $('.utente').click(function(){
 
 
 /*FUNZIONI*/
+// Invio messaggio
+function invioMsg(){
+    $('.fa-microphone').removeClass('hidden')   // cambio icona una volta inviato messaggio
+    $('.fa-paper-plane').addClass('hidden')
+    invioRicezione();
+}
 
+//Messaggio e risposta
 function invioRicezione(){
     var messaggioInput = $('#messaggio').val();
     $('#messaggio').val('');
