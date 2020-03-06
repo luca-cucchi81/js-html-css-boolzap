@@ -51,12 +51,20 @@ $('#cerca-contatti').keyup(function(event){
     });
 })
 
-$('.utente').click(function(){      //cambia utente in chat al click su uno dei contatti
+$('.utente').click(function(){
+    //cambia utente in chat al click su uno dei contatti
     var imgSelected = $(this).find('img').attr('src');
     var nameSelected = $(this).find('h3').text();
     $('.chat-contact').find('img').attr('src', imgSelected);
     $('.chat-contact').find('h3').text(nameSelected);
     $('.chat-contact').find('p').text('Online');
+
+    // cambio chat a seconda utente cliccato
+    // devo matchare il data dell'utente cliccato con l'id della chat corrispondente
+    var chatId = $(this).data('chat');
+    console.log(chatId);
+    $('.main-chat').removeClass('active');
+    $(chatId).addClass('active');
 });
 
 

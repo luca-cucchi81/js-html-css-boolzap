@@ -205,12 +205,15 @@ body:after{
     background-repeat: no-repeat;
     background-size: cover;
     overflow: auto;
-    display: flex;
+    display: none;
     flex-direction: column;
     scrollbar-width: thin;
     scrollbar-color: #25d366 #ffffff;
 }
 
+.main-chat.active{
+    display: flex;
+}
 .template {
     width: 100%;
 	display: flex;
