@@ -244,6 +244,18 @@ body:after{
     box-shadow: 2px 2px 5px 0;
 }
 
+.dropdown-received{
+    width: 200px;
+    position: absolute;
+    left: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    background: #81daf5;
+    box-shadow: -2px 2px 5px 0;
+    border-radius: 5px;
+}
+
 .speech-bubble-received:after {
     content: '';
     position: absolute;
@@ -278,6 +290,22 @@ body:after{
     box-shadow: -2px 2px 5px 0;
 }
 
+.dropdown-sent{
+    width: 200px;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    background: #81daf5;
+    box-shadow: -2px 2px 5px 0;
+    border-radius: 5px;
+}
+
+.dropdown-sent dd,
+.dropdown-received dd{
+    padding: 10px;
+}
 .speech-bubble-sent:after {
     content: '';
     position: absolute;
@@ -292,6 +320,15 @@ body:after{
     margin-top: -10px;
     margin-right: -20px;
 }
+
+.testo-bubble-sent:after,
+.testo-bubble-received:after {
+    font-family: "FontAwesome";
+    font-size: 16px;
+    content: '\f107';
+    padding-left: 20px;
+}
+
 /*stile x sez. invio messaggio in chat*/
 .message-bar{
     width: 100%;
@@ -317,6 +354,7 @@ body:after{
     font-size: 16px;
     color: #99A1A1;
     border: none;
+    outline: none;
 }
 
 .box-sent,

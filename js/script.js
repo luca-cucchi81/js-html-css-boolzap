@@ -60,6 +60,7 @@ $('.utente').click(function(){
 });
 
 
+
 /*FUNZIONI*/
 // Invio messaggio
 function invioMsg(){
