@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Nunito', sans-serif;
   }
 
   .clearfix::after {
@@ -67,6 +67,12 @@ body:after{
     padding: 0 10px;
     color: #99A1A1;
     cursor: pointer;
+    transition: 1s;
+}
+
+.header-user i:hover{
+    transform: scale(1.5);
+    color: #009587;
 }
 /*stile colonna sx - banner notifiche*/
 .banner{
@@ -123,7 +129,7 @@ body:after{
   background-color: white;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: #25d366 #ffffff;
+  scrollbar-color: #00ccb8 #ffffff;
 }
 
 .utente {
@@ -134,7 +140,7 @@ body:after{
 }
 
 .utente:hover{
-    background-color: rgba(37,211,102,0.48)
+    background-color: #00ccb8
 }
 .utente img {
     height: 50px;
@@ -143,16 +149,16 @@ body:after{
 }
 
 .text-user h3{
-    font-size: 18px;
+    font-size: 20px;
 }
 .text-user p{
-    font-size: small;
+    font-size: 14px;
     color: grey;
 }
 
 .users-contact-time {
   font-size: small;
-  color: grey;
+  color: black;
   padding-left: 70px;
   padding-bottom: 20px;
 }
@@ -194,20 +200,29 @@ body:after{
     color: grey;
 }
 
+.header-chat-icons{
+    padding-right: 10px;
+}
+
 .header-chat-icons i{
     font-size: 20px;
     padding: 10px;
     color: #99A1A1;
     cursor: pointer;
+    transition: 1s;
 }
+
+.header-chat-icons i:hover{
+    transform: scale(1.5);
+    color: #009587;
+}
+
 /*stile per chat principale*/
 .main-chat{
     width: 100%;
     height: 80%;
     padding: 0 60px;
-    background-image: url('https://fsb.zobj.net/crop.php?r=sEgoYzFox9nu05-Z038Pe5hqtlSvcgCH0K2gF8gggQjIz1nS56tYS0oiTN48smT_eBTFwSoJ6DiC3UCXjInbRR1ywRiLLV110DNIiKBkXNwg0RoWOrtyT7p7dw1iYecetOAZfxoeBY86dSXo');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-color: #009587;
     overflow: auto;
     display: none;
     flex-direction: column;
@@ -251,8 +266,7 @@ body:after{
     display: flex;
     justify-content: center;
     padding: 10px 5px;
-    background: #81daf5;
-    box-shadow: -2px 2px 5px 0;
+    background: #ccffdd;
     border-radius: 5px;
 }
 
@@ -297,8 +311,7 @@ body:after{
     display: flex;
     justify-content: center;
     padding: 10px 5px;
-    background: #81daf5;
-    box-shadow: -2px 2px 5px 0;
+    background: #ccffdd;
     border-radius: 5px;
 }
 
@@ -350,11 +363,15 @@ body:after{
 .message-bar input{
     width: 80%;
     margin-top: 10px;
-    padding: 10px;
-    font-size: 16px;
+    padding: 10px 10px;
+    font-size: 18px;
     color: #99A1A1;
     border: none;
     outline: none;
+}
+
+#messaggio{
+    padding-left: 15px;
 }
 
 .box-sent,

@@ -1,10 +1,10 @@
 //cambio icona su focus barra messaggi
     $('#messaggio').focus(function(){
-        $(this).css({'background-color': 'rgba(37,211,102,0.48)', 'color': 'black', 'border-radius': '30px'});
+        $(this).css({'background-color': ' #00ccb8', 'color': 'black', 'border-radius': '30px'});
         $('.fa-microphone').addClass('hidden');
         $('.fa-paper-plane').removeClass('hidden');
     }).blur(function(){
-        $(this).css({'background-color': '#fff', 'color': '#102e30'});
+        $(this).css({'background-color': '#fff', 'color': 'black'});
         $('.fa-microphone').removeClass('hidden');
         $('.fa-paper-plane').addClass('hidden');
     })
@@ -50,6 +50,9 @@ $('.utente').click(function(){
     $('.chat-contact').find('img').attr('src', imgSelected);
     $('.chat-contact').find('h3').text(nameSelected);
     $('.chat-contact').find('p').text('Online');
+    //aggiungo stile background su utente selezionato
+    $('.utente').css('background-color','#fff')
+    $(this).css('background-color', '#00ccb8');
 
     // cambio chat a seconda utente cliccato
     // devo matchare il data dell'utente cliccato con l'id della chat corrispondente
