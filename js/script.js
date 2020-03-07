@@ -125,7 +125,8 @@ function addZero(num) {
   return num;
 }
 
-function scroll() { // Funzione di autoscorrimento in basso
+// Funzione di autoscorrimento in basso
+function scroll() {
         var pixelScroll = $('.main-chat.active').height();
         $('.main-chat.active').scrollTop(pixelScroll);
     }
