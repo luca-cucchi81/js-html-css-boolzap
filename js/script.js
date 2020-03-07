@@ -57,7 +57,6 @@ $('.utente').click(function(){
     // cambio chat a seconda utente cliccato
     // devo matchare il data dell'utente cliccato con l'id della chat corrispondente
     var chatId = $(this).data('chat');
-    console.log(chatId);
     $('.main-chat').removeClass('active');
     $(chatId).addClass('active');
 });
@@ -92,12 +91,14 @@ function invioRicezione(){
     messaggio.find('p').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
     messaggio.find('.time-sent').text(orario()); //aggiungo ora
     $('.active').append(messaggio); // creo cascata messaggi nella main chat
+    scroll()
 
     setTimeout(function(){
         var risposta = $('.active .box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
         risposta.find('p').text(risposteRandom[randomNum(risposteRandom.length)]); //modif. testo risposta che e inserimento nel bubble
         risposta.find('.time-received').text(orario()); //aggiungo ora
         $('.active').append(risposta); // creo cascata messaggi nella main chat
+        scroll()
     }, 1000)
 }
 
@@ -123,3 +124,8 @@ function addZero(num) {
   }
   return num;
 }
+
+function scroll() { // Funzione di autoscorrimento in basso
+        var pixelScroll = $('.main-chat.active').height();
+        $('.main-chat.active').scrollTop(pixelScroll);
+    }
