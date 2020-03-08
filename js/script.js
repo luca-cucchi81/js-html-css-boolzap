@@ -1,13 +1,17 @@
 //cambio icona su focus barra messaggi
     $('#messaggio').focus(function(){
-        $(this).css({'background-color': ' #00ccb8', 'color': 'black', 'border-radius': '30px'});
+        $(this).css({'border': '2px solid #00ccb8', 'color': 'black', 'border-radius': '20px'});
         $('.fa-microphone').addClass('hidden');
         $('.fa-paper-plane').removeClass('hidden');
     }).blur(function(){
-        $(this).css({'background-color': '#fff', 'color': 'black'});
+        $(this).css({'border-color': '#fff', 'color': 'black'});
         $('.fa-microphone').removeClass('hidden');
         $('.fa-paper-plane').addClass('hidden');
     })
+
+$('.search-bar input').focus(function(){
+    $(this).css('border-color', '#00ccb8')
+})
 
 $('#invia').click(function(){
     invioMsg();

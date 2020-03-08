@@ -114,8 +114,8 @@ body:after{
     justify-content: space-around;
     align-items: center;
     color: grey;
-
 }
+
 .search-bar i{
     cursor: pointer;
 }
@@ -125,6 +125,8 @@ body:after{
     padding: 0 10px;
     border: 1px solid #D8D8D8;
     border-radius: 30px;
+    outline: none;
+    
 }
 
 /*stile colonna sx - lista contatti*/
