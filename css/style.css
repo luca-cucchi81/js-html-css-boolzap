@@ -148,6 +148,7 @@ body:after{
 
 .utente:hover{
     background-color: #00ccb8;
+    cursor: pointer;
 }
 
 .utente img {
@@ -272,6 +273,7 @@ body:after{
     font-size: 16px;
     font-weight: 700;
     box-shadow: 2px 2px 5px 0;
+    cursor: pointer;
 }
 
 .dropdown-received{
@@ -283,6 +285,7 @@ body:after{
     padding: 10px 5px;
     background: #ccffdd;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .speech-bubble-received:after {
@@ -317,6 +320,7 @@ body:after{
     font-size: 16px;
     font-weight: 700;
     box-shadow: -2px 2px 5px 0;
+    cursor: pointer;
 }
 
 .dropdown-sent{
@@ -328,12 +332,19 @@ body:after{
     padding: 10px 5px;
     background: #ccffdd;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .dropdown-sent dd,
 .dropdown-received dd{
     padding: 10px;
 }
+
+.dropdown-sent dd:hover,
+.dropdown-received dd:hover{
+    color: red;
+}
+
 .speech-bubble-sent:after {
     content: '';
     position: absolute;

@@ -69,16 +69,24 @@ $('.utente').click(function(){
 });
 
 $(document).on('click', '.speech-bubble-sent', function(){
+    $(this).addClass('sent-erase')
     $(this).find('.dropdown-sent').slideDown(500);
     $('.main-chat').click(function(){
         $('.dropdown-sent').hide();
     });
+    $(document).on('click', '#erase-sent', function(){
+        $('.sent-erase').hide();
+    })
 });
 $(document).on('click', '.speech-bubble-received', function(){
+    $(this).addClass('received-erase')
     $(this).find('.dropdown-received').slideDown(500);
     $('.main-chat').click(function(){
         $('.dropdown-received').hide();
     });
+    $(document).on('click', '#erase-received', function(){
+        $('.received-erase').hide();
+    })
 });
 
 /*FUNZIONI*/
