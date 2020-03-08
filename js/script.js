@@ -1,4 +1,4 @@
-//cambio icona su focus barra messaggi
+//cambio icona su focus barra messaggi + cambio stile su input
     $('#messaggio').focus(function(){
         $(this).css({'border': '2px solid #00ccb8', 'color': 'black', 'border-radius': '20px'});
         $('.fa-microphone').addClass('hidden');
@@ -8,11 +8,11 @@
         $('.fa-microphone').removeClass('hidden');
         $('.fa-paper-plane').addClass('hidden');
     })
-
+// cambio stile su focus ricerca utenti
 $('.search-bar input').focus(function(){
     $(this).css('border-color', '#00ccb8')
 })
-
+//invio messaggi e cambio incona su clich invio e pressione tasto Enter
 $('#invia').click(function(){
     invioMsg();
 });
@@ -25,8 +25,8 @@ $('#messaggio').keypress(function(event){
         invioMsg();
     }
 });
-
-var risposteRandom =[       // risposte random su invio messaggio
+// risposte random su invio messaggio
+var risposteRandom =[
     'A dopo!',
     'A che ora ci vediamo?',
     'Oggi non ci sono!',
@@ -57,6 +57,9 @@ $('.utente').click(function(){
     //aggiungo stile background su utente selezionato
     $('.utente').css('background-color','#fff')
     $(this).css('background-color', '#00ccb8');
+    $('.utente').removeClass('selezionato');
+    $(this).addClass('selezionato');
+
 
     // cambio chat a seconda utente cliccato
     // devo matchare il data dell'utente cliccato con l'id della chat corrispondente
@@ -103,6 +106,8 @@ function invioRicezione(){
         risposta.find('.time-received').text(orario()); //aggiungo ora
         $('.active').append(risposta); // creo cascata messaggi nella main chat
         scroll()
+        $('.selezionato').find('.users-contact-time').text(orario());
+        $('.selezionato').find('p').text(risposta.find('p').text());
     }, 1000)
 }
 

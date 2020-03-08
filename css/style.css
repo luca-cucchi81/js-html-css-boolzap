@@ -119,6 +119,7 @@ body:after{
 .search-bar i{
     cursor: pointer;
 }
+
 .search-bar input{
     width: 90%;
     height: 30px;
@@ -126,7 +127,6 @@ body:after{
     border: 1px solid #D8D8D8;
     border-radius: 30px;
     outline: none;
-    
 }
 
 /*stile colonna sx - lista contatti*/
@@ -142,21 +142,28 @@ body:after{
     width: 100%;
     height: 80px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
 .utente:hover{
-    background-color: #00ccb8
+    background-color: #00ccb8;
 }
+
 .utente img {
+    width: 20%;
     height: 50px;
     border-radius: 50%;
     padding: 0 10px;
 }
 
+.text-user{
+    width: 60%;
+}
 .text-user h3{
     font-size: 20px;
 }
+
 .text-user p{
     font-size: 14px;
     color: grey;
@@ -179,6 +186,7 @@ body:after{
     display: flex;
     flex-direction: column;
 }
+
 /*stile x barra contatto con cui si chatta*/
 .header-chat{
     width: 100%;
@@ -188,6 +196,7 @@ body:after{
     align-items: center;
     border-bottom: 1px solid #D8D8D8;
 }
+
 .chat-contact{
     height: 100%;
     display: flex;
@@ -238,6 +247,7 @@ body:after{
 .main-chat.active{
     display: flex;
 }
+
 .template {
     width: 100%;
 	display: flex;
@@ -363,6 +373,9 @@ body:after{
     padding: 10px;
     color: #99A1A1;
     cursor: pointer;
+}
+.message-bar span:hover{
+    color: #F0C327;
 }
 
 .message-bar input{
