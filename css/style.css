@@ -117,7 +117,12 @@ body:after{
 }
 
 .search-bar i{
+    padding-right: 10px;
     cursor: pointer;
+}
+
+.search-bar i:first-child:hover{
+    color: red;
 }
 
 .search-bar input{

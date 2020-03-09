@@ -89,6 +89,23 @@ $(document).on('click', '.speech-bubble-received', function(){
     })
 });
 
+// feature bonus: click su icona per aggiungere contatti (non completa xè mancano le funzionalità dei precedenti contatti + errori vari da fixare)
+$('.aggiungi-contatto').click(function(){
+    var nuovoContatto = $('.utente').first().clone();
+    nuovoContatto.find('h3').text(nomiRandom[randomNum(nomiRandom.length)]);
+    $('.users-contact').append(nuovoContatto);
+    console.log(nuovoContatto);
+});
+
+var nomiRandom =[
+    'Alfonso D.',
+    'Giovanni',
+    'Andrea S.',
+    'Gustavo',
+    'Paolo',
+    'Edoardo F.'
+];
+
 /*FUNZIONI*/
 // Invio messaggio
 function invioMsg(){
