@@ -74,7 +74,7 @@ $(document).on('click', '.speech-bubble-sent', function(){
     $('.main-chat').click(function(){
         $('.dropdown-sent').hide();
     });
-    $(document).on('click', '#erase-sent', function(){
+    $(document).on('click', '.erase-sent', function(){
         $('.sent-erase').hide();
     })
 });
@@ -84,7 +84,7 @@ $(document).on('click', '.speech-bubble-received', function(){
     $('.main-chat').click(function(){
         $('.dropdown-received').hide();
     });
-    $(document).on('click', '#erase-received', function(){
+    $(document).on('click', '.erase-received', function(){
         $('.received-erase').hide();
     })
 });
