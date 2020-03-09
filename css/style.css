@@ -114,6 +114,7 @@ body:after{
     justify-content: space-around;
     align-items: center;
     color: grey;
+    transition: 2s ;
 }
 
 .search-bar i{
@@ -122,7 +123,8 @@ body:after{
 }
 
 .search-bar i:first-child:hover{
-    color: red;
+    color: orange;
+    transform: scale(1.5);
 }
 
 .search-bar input{
