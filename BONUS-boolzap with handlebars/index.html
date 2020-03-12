@@ -36,97 +36,37 @@
                 </div>
 
                 <div class="users-contact">
-                    <div class="utente" data-chat="#amico-1">
-                        <img src="img/avatar_1.png" alt="">
-                        <div class="text-user">
-                            <h3>Antonio</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-1" class="utente" data-chat="#amico-1"></div>
 
-                    <div class="utente" data-chat="#amico-2">
-                        <img src="img/avatar_2.png" alt="">
-                        <div class="text-user">
-                            <h3>Bubu</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-2" class="utente" data-chat="#amico-2"></div>
 
-                    <div class="utente" data-chat="#amico-3">
-                        <img src="img/avatar_3.png" alt="">
-                        <div class="text-user">
-                            <h3>Claudia</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-3" class="utente" data-chat="#amico-3"></div>
 
-                    <div class="utente" data-chat="#amico-4">
-                        <img src="img/avatar_4.png" alt="">
-                        <div class="text-user">
-                            <h3>Alex P.</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-4" class="utente" data-chat="#amico-4"></div>
 
-                    <div class="utente" data-chat="#amico-5">
-                        <img src="img/avatar_5.png" alt="">
-                        <div class="text-user">
-                            <h3>Edoardo L.</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-5" class="utente" data-chat="#amico-5"></div>
 
-                    <div class="utente" data-chat="#amico-6">
-                        <img src="img/avatar_6.png" alt="">
-                        <div class="text-user">
-                            <h3>Cristina</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-6" class="utente" data-chat="#amico-6"></div>
 
-                    <div class="utente" data-chat="#amico-7">
-                        <img src="img/avatar_7.png" alt="">
-                        <div class="text-user">
-                            <h3>Beppe</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-7" class="utente" data-chat="#amico-7"></div>
 
-                    <div class="utente" data-chat="#amico-8">
-                        <img src="img/avatar_8.png" alt="">
-                        <div class="text-user">
-                            <h3>Paolo B.</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-8" class="utente" data-chat="#amico-8"></div>
 
-                    <div class="utente" data-chat="#amico-9">
-                        <img src="img/avatar_9.png" alt="">
-                        <div class="text-user">
-                            <h3>Alice F.</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-9" class="utente" data-chat="#amico-9"></div>
 
-                    <div class="utente" data-chat="#amico-10">
-                        <img src="img/avatar_10.png" alt="">
-                        <div class="text-user">
-                            <h3>Charlie</h3>
-                            <p>Non poteva essere altrimenti</p>
-                        </div>
-                        <time class="users-contact-time">13:00</time>
-                    </div>
+                    <div id="contact-10" class="utente" data-chat="#amico-10"></div>
                 </div>
             </div>
+
+            <!-- ==TEMPLATE UNICO PER INSERIMENTO UTENTE -->
+            <script id="user-template" type="text/x-handlebars-template">
+                <img src={{immagine}} alt="">
+                <div class="text-user">
+                    <h3>{{nome}}</h3>
+                    <p>Non poteva essere altrimenti</p>
+                </div>
+                <time class="users-contact-time">13:00</time>
+            </script>
 
             <!-- ===COLONNA DESTRA=== -->
             <div class="right-column">
