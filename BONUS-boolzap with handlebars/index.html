@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="it" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://kit.fontawesome.com/c42bf76b68.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css?family=Nunito:400,700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Boolzap</title>
+    </head>
+    <body>
+        <div class="container">
+            <!--===COLONNA SINISTRA===-->
+            <div class="left-column">
+                <div class="header-user">    <!-- sez user -->
+                    <img src="img/user.jpg" alt="user-avatar">
+                    <div class="header-user-icons">
+                    <i class="fas fa-circle-notch"></i>
+                    <i class="fas fa-comment-alt"></i>
+                    <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+                <div class="banner">  <!-- banner notifiche -->
+                    <i class="fas fa-bell-slash"></i>
+                    <span>
+                        <strong>Ricevi notifiche di nuovi messaggi</strong><br>
+                        <a href="#">Attiva notifiche desktop</a>
+                    </span>
+                </div>
+
+                <div class="search-bar"> <!-- barra ricerca -->
+                        <i class="fas fa-user-plus aggiungi-contatto"></i>
+                        <i class="fas fa-search"></i>
+                        <input id="cerca-contatti" placeholder="Cerca contatti">
+                </div>
+
+                <div class="users-contact">
+                    <div class="utente" data-chat="#amico-1">
+                        <img src="img/avatar_1.png" alt="">
+                        <div class="text-user">
+                            <h3>Antonio</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-2">
+                        <img src="img/avatar_2.png" alt="">
+                        <div class="text-user">
+                            <h3>Bubu</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-3">
+                        <img src="img/avatar_3.png" alt="">
+                        <div class="text-user">
+                            <h3>Claudia</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-4">
+                        <img src="img/avatar_4.png" alt="">
+                        <div class="text-user">
+                            <h3>Alex P.</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-5">
+                        <img src="img/avatar_5.png" alt="">
+                        <div class="text-user">
+                            <h3>Edoardo L.</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-6">
+                        <img src="img/avatar_6.png" alt="">
+                        <div class="text-user">
+                            <h3>Cristina</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-7">
+                        <img src="img/avatar_7.png" alt="">
+                        <div class="text-user">
+                            <h3>Beppe</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-8">
+                        <img src="img/avatar_8.png" alt="">
+                        <div class="text-user">
+                            <h3>Paolo B.</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-9">
+                        <img src="img/avatar_9.png" alt="">
+                        <div class="text-user">
+                            <h3>Alice F.</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+
+                    <div class="utente" data-chat="#amico-10">
+                        <img src="img/avatar_10.png" alt="">
+                        <div class="text-user">
+                            <h3>Charlie</h3>
+                            <p>Non poteva essere altrimenti</p>
+                        </div>
+                        <time class="users-contact-time">13:00</time>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ===COLONNA DESTRA=== -->
+            <div class="right-column">
+                <!--Sez. contatto con cui si chatta-->
+                <div class="header-chat">
+                    <div class="chat-contact">
+                        <img src="img/avatar_2.png" alt="">
+                        <div class="text-contact">
+                            <h3>Bubu</h3>
+                            <p>Ultimo accesso alle <time>13:00</time></p>
+                        </div>
+                    </div>
+
+                    <div class="header-chat-icons">
+                        <i class="fas fa-search"></i>
+                        <i class="fas fa-paperclip"></i>
+                        <i class="fas fa-ellipsis-v"></i>
+                    </div>
+                </div>
+
+                <!-- chat principale-->
+                <div id="amico-1" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <script id="entry-template" type="text/x-handlebars-template">
+                                <div class="template">
+                                    <div class="speech-bubble-sent">
+                                        <p class="testo-bubble-sent">{{testo}}</p>
+                                        <time class="time-sent">{{ora}}</time>
+                                        <div class="dropdown-sent hidden">
+                                            <dl>
+                                                <dd class="erase-sent">Elimina messaggio</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </script>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <script id="entry-template2" type="text/x-handlebars-template">
+                                <div class="template2">
+                                    <div class="speech-bubble-received">
+                                        <p class="testo-bubble-received">{{prova}}</p>
+                                        <time class="time-received">{{ora}}</time>
+                                        <div class="dropdown-received hidden">
+                                            <dl>
+                                                <dd class="erase-received">Elimina messaggio</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </script>
+                        </div>
+                </div>
+                <div id="amico-2" class="main-chat active">
+                    <!--messaggi inviati-->
+                    <div class="box-sent">
+                        <script id="entry-template" type="text/x-handlebars-template">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">{{testo}}</p>
+                                    <time class="time-sent">{{ora}}</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                    <!--messaggi ricevuti-->
+                    <div class="box-received">
+                        <script id="entry-template2" type="text/x-handlebars-template">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">{{prova}}</p>
+                                    <time class="time-received">{{ora}}</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                </div>
+                <div id="amico-3" class="main-chat">
+                    <!--messaggi inviati-->
+                        <<div class="box-sent">
+                            <script id="entry-template" type="text/x-handlebars-template">
+                                <div class="template">
+                                    <div class="speech-bubble-sent">
+                                        <p class="testo-bubble-sent">{{testo}}</p>
+                                        <time class="time-sent">{{ora}}</time>
+                                        <div class="dropdown-sent hidden">
+                                            <dl>
+                                                <dd class="erase-sent">Elimina messaggio</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </script>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <script id="entry-template2" type="text/x-handlebars-template">
+                                <div class="template2">
+                                    <div class="speech-bubble-received">
+                                        <p class="testo-bubble-received">{{prova}}</p>
+                                        <time class="time-received">{{ora}}</time>
+                                        <div class="dropdown-received hidden">
+                                            <dl>
+                                                <dd class="erase-received">Elimina messaggio</dd>
+                                            </dl>
+                                        </div>
+                                    </div>
+                                </div>
+                            </script>
+                        </div>
+                </div>
+                <div id="amico-4" class="main-chat">
+                    <!--messaggi inviati-->
+                    <div class="box-sent">
+                        <script id="entry-template" type="text/x-handlebars-template">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">{{testo}}</p>
+                                    <time class="time-sent">{{ora}}</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                    <!--messaggi ricevuti-->
+                    <div class="box-received">
+                        <script id="entry-template2" type="text/x-handlebars-template">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">{{prova}}</p>
+                                    <time class="time-received">{{ora}}</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </script>
+                    </div>
+                </div>
+                <div id="amico-5" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">prova</p>
+                                    <time class="time-sent">15:24</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">prova</p>
+                                    <time class="time-received">18:33</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="amico-6" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">prova</p>
+                                    <time class="time-sent">15:24</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">prova</p>
+                                    <time class="time-received">18:33</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="amico-7" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">prova</p>
+                                    <time class="time-sent">15:24</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">prova</p>
+                                    <time class="time-received">18:33</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="amico-8" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">prova</p>
+                                    <time class="time-sent">15:24</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">prova</p>
+                                    <time class="time-received">18:33</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="amico-9" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">prova</p>
+                                    <time class="time-sent">15:24</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">prova</p>
+                                    <time class="time-received">18:33</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div id="amico-10" class="main-chat">
+                    <!--messaggi inviati-->
+                        <div class="box-sent">
+                            <div class="template">
+                                <div class="speech-bubble-sent">
+                                    <p class="testo-bubble-sent">prova</p>
+                                    <time class="time-sent">15:24</time>
+                                    <div class="dropdown-sent hidden">
+                                        <dl>
+                                            <dd class="erase-sent">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <!--messaggi ricevuti-->
+                        <div class="box-received">
+                            <div class="template2">
+                                <div class="speech-bubble-received">
+                                    <p class="testo-bubble-received">prova</p>
+                                    <time class="time-received">18:33</time>
+                                    <div class="dropdown-received hidden">
+                                        <dl>
+                                            <dd class="erase-received">Elimina messaggio</dd>
+                                        </dl>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+                <!--sez. invio messaggi in chat-->
+                <div class="message-bar">
+                    <span>
+                        <i class="far fa-smile"></i>
+                    </span>
+
+                    <input id="messaggio" placeholder="Scrivi un messaggio">
+
+                    <span id="invia">
+                        <i class="fas fa-microphone"></i>
+                        <i class="fas fa-paper-plane hidden"></i>
+                    </span>
+                </div>
+        </div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="js/script.js" charset="utf-8"></script>
+    </body>
+</html>

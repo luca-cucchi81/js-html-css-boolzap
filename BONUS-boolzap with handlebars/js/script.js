@@ -119,20 +119,31 @@ function invioRicezione(){
     var messaggioInput = $('#messaggio').val();
     $('#messaggio').val('');
 
-    var messaggio = $('.active .box-sent .template').clone(); //copia contenuto messaggio inviato che è dentro il box (che è display none)
-    messaggio.find('p').text(messaggioInput); //modif. testo messaggio inviato che e inserimento nel bubble
-    messaggio.find('.time-sent').text(orario()); //aggiungo ora
-    $('.active').append(messaggio); // creo cascata messaggi nella main chat
+    var source = $('#entry-template').html();
+    var template = Handlebars.compile(source);
+    var context = {
+        testo: messaggioInput,
+        ora: orario()
+    };
+    var html = template(context);
+
+    $('.active').append(html); // creo cascata messaggi nella main chat
     scroll()
 
     setTimeout(function(){
-        var risposta = $('.active .box-received .template2').clone(); //copia contenuto risposta che è dentro il box (che è display none)
-        risposta.find('p').text(risposteRandom[randomNum(risposteRandom.length)]); //modif. testo risposta che e inserimento nel bubble
-        risposta.find('.time-received').text(orario()); //aggiungo ora
-        $('.active').append(risposta); // creo cascata messaggi nella main chat
+        var source = $('#entry-template2').html();
+        var template = Handlebars.compile(source);
+        var context = {
+            prova: risposteRandom[randomNum(risposteRandom.length)],
+            ora: orario()
+        };
+        var risp = template(context);
+
+        $('.active').append(risp); // creo cascata messaggi nella main chat
         scroll()
-        $('.selezionato').find('.users-contact-time').text(orario());
-        $('.selezionato').find('p').text(risposta.find('p').text());
+
+        $('.selezionato').find('.users-contact-time').text(context.ora);
+        $('.selezionato').find('p').text(context.prova);
     }, 1000)
 }
 

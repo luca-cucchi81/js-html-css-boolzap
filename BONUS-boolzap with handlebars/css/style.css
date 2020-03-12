@@ -1,0 +1,420 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+  }
+
+  .clearfix::after {
+      content: "";
+      display: table;
+      clear: both;
+  }
+
+body{
+    background-color: #dedada;
+}
+
+body:after{
+    content: '';
+    width: 100vw;
+    height: 100px;
+    background-color: #009587;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.container{
+    width: 60vw;
+    margin: 20px auto;
+    height: 82vh;
+    background-color: #ffffff;
+    display: flex;
+}
+
+::-webkit-scrollbar {
+    display:none;
+}
+
+/* == INIZIO STILE PER BARRA SX==*/
+
+.left-column{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    border-right: 1px solid #D8D8D8;
+}
+ /*stile colonna sx - sez. utente*/
+.header-user{
+    width: 100%;
+    height: 80px;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.header-user img{
+    height: 80%;
+    margin: 10px 10px;
+    border-radius: 5px;
+}
+
+.header-user-icons{
+    padding-right: 5px;
+}
+.header-user i{
+    font-size: 20px;
+    padding: 0 10px;
+    color: #99A1A1;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.header-user i:hover{
+    transform: scale(1.5);
+    color: #009587;
+}
+/*stile colonna sx - banner notifiche*/
+.banner{
+    width: 100%;
+    height: 80px;
+    background-color: #81DAF5;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.banner span {
+    padding-left: 10px;
+}
+.banner i{
+    font-size: 20px;
+    color: #81DAF5;
+    background-color: white;
+    border-radius: 100%;
+    padding: 15px 15px;
+}
+
+.banner a{
+    font-weight: bold;
+    font-size: small;
+    color: grey;
+}
+
+.search-bar{
+    width: 100%;
+    height: 50px;
+    padding: 8px 20px;
+    border-bottom: 1px solid #D8D8D8;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: grey;
+    transition: 2s ;
+}
+
+.search-bar i{
+    padding-right: 10px;
+    cursor: pointer;
+}
+
+.search-bar i:first-child:hover{
+    color: orange;
+    transform: scale(1.5);
+}
+
+.search-bar input{
+    width: 90%;
+    height: 30px;
+    padding: 0 10px;
+    border: 1px solid #D8D8D8;
+    border-radius: 30px;
+    outline: none;
+}
+
+/*stile colonna sx - lista contatti*/
+.users-contact {
+  width: 100%;
+  background-color: white;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #00ccb8 #ffffff;
+}
+
+.utente {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.utente:hover{
+    background-color: #00ccb8;
+    cursor: pointer;
+}
+
+.utente img {
+    width: 20%;
+    height: 50px;
+    border-radius: 50%;
+    padding: 0 10px;
+}
+
+.text-user{
+    width: 60%;
+}
+.text-user h3{
+    font-size: 20px;
+}
+
+.text-user p{
+    font-size: 14px;
+    color: grey;
+}
+
+.users-contact-time {
+  font-size: small;
+  color: black;
+  padding-right: 10px;
+  padding-bottom: 20px;
+}
+
+/*== FINE STILE PER BARRA SX==*/
+
+/*==INIZIO STILE PER BARRA DX==*/
+.right-column{
+    width: 70%;
+    height: 100%;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+}
+
+/*stile x barra contatto con cui si chatta*/
+.header-chat{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D8D8D8;
+}
+
+.chat-contact{
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.chat-contact img{
+    height: 80%;
+    margin: 10px 10px;
+}
+
+.chat-contact p{
+    font-size: 14px;
+    font-weight: 700;
+    color: grey;
+}
+
+.header-chat-icons{
+    padding-right: 10px;
+}
+
+.header-chat-icons i{
+    font-size: 20px;
+    padding: 10px;
+    color: #99A1A1;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.header-chat-icons i:hover{
+    transform: scale(1.5);
+    color: #009587;
+}
+
+/*stile per chat principale*/
+.main-chat{
+    width: 100%;
+    height: 80%;
+    padding: 0 60px;
+    background-color: #009587;
+    overflow: auto;
+    display: none;
+    flex-direction: column;
+    scrollbar-width: thin;
+    scrollbar-color: #25d366 #ffffff;
+}
+
+.main-chat.active{
+    display: flex;
+}
+
+.template {
+    width: 100%;
+	display: flex;
+    justify-content: flex-end;
+    padding-top: 40px;
+}
+
+.template2{
+    width: 100%;
+	display: flex;
+    justify-content: flex-start;
+    padding-top: 40px;
+}
+
+
+.speech-bubble-received{
+    margin-bottom: 20px;
+    padding: 20px 50px;
+    background: #ffffff;
+	border-radius: .4em;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: 2px 2px 5px 0;
+    cursor: pointer;
+}
+
+.dropdown-received{
+    width: 200px;
+    position: absolute;
+    left: 80%;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    background: #ccffdd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.speech-bubble-received:after {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-right-color: #ffffff;
+    border-left: 0;
+    border-top: 0;
+    margin-top: -10px;
+    margin-left: -20px;
+}
+.speech-bubble-received time,
+.speech-bubble-sent time{
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+    font-size: small;
+    color: grey;
+}
+
+.speech-bubble-sent{
+    margin-bottom: 20px;
+    padding: 20px 50px;
+    background: rgb(37,211,102);
+	border-radius: .4em;
+    position: relative;
+    font-size: 16px;
+    font-weight: 700;
+    box-shadow: -2px 2px 5px 0;
+    cursor: pointer;
+}
+
+.dropdown-sent{
+    width: 200px;
+    position: absolute;
+    right: 50px;
+    display: flex;
+    justify-content: center;
+    padding: 10px 5px;
+    background: #ccffdd;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.dropdown-sent dd,
+.dropdown-received dd{
+    padding: 10px;
+}
+
+.dropdown-sent dd:hover,
+.dropdown-received dd:hover{
+    color: red;
+}
+
+.speech-bubble-sent:after {
+    content: '';
+    position: absolute;
+    right: 5px;
+    top: 40%;
+    width: 0;
+    height: 0;
+    border: 20px solid transparent;
+    border-left-color: rgb(37,211,102);
+    border-right: 0;
+    border-bottom: 0;
+    margin-top: -10px;
+    margin-right: -20px;
+}
+
+.testo-bubble-sent:after,
+.testo-bubble-received:after {
+    font-family: "FontAwesome";
+    font-size: 16px;
+    content: '\f107';
+    padding-left: 20px;
+}
+
+/*stile x sez. invio messaggio in chat*/
+.message-bar{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.message-bar span{
+    font-size: 30px;
+    margin-top: 10px;
+    padding: 10px;
+    color: #99A1A1;
+    cursor: pointer;
+}
+.message-bar span:hover{
+    color: #F0C327;
+}
+
+.message-bar input{
+    width: 80%;
+    margin-top: 10px;
+    padding: 10px 10px;
+    font-size: 18px;
+    color: #99A1A1;
+    border: none;
+    outline: none;
+}
+
+#messaggio{
+    padding-left: 15px;
+}
+
+.box-sent,
+.box-received{
+    display: none;
+}
+
+.hidden{
+    display: none;
+}
