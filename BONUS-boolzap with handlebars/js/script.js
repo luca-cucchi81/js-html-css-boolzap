@@ -39,77 +39,64 @@ var risposteRandom =[
 var source = $('#user-template').html();
 var utenteTemplate = Handlebars.compile(source);
 
-var amico1 = {                          // -- 1° amico --
-    immagine: "img/avatar_1.png",
-    nome: 'Antonio'
+var amici =[
+    {
+        amico: '#amico-1',
+        immagine: "img/avatar_1.png",
+        nome: 'Antonio'
+    },
+    {
+        amico: '#amico-2',
+        immagine: "img/avatar_2.png",
+        nome: 'Bubu'
+    },
+    {
+        amico: '#amico-3',
+        immagine: "img/avatar_3.png",
+        nome: 'Claudia'
+    },
+    {
+        amico: '#amico-4',
+        immagine: "img/avatar_4.png",
+        nome: 'Alex P.'
+    },
+    {
+        amico: '#amico-5',
+        immagine: "img/avatar_5.png",
+        nome: 'Edoardo L.'
+    },
+    {
+        amico: '#amico-6',
+        immagine: "img/avatar_6.png",
+        nome: 'Cristina'
+    },
+    {
+        amico: '#amico-7',
+        immagine: "img/avatar_7.png",
+        nome: 'Beppe'
+    },
+    {
+        amico: '#amico-8',
+        immagine: "img/avatar_8.png",
+        nome: 'Paolo B.'
+    },
+    {
+        amico: '#amico-9',
+        immagine: "img/avatar_9.png",
+        nome: 'Alice F.'
+    },
+    {
+        amico: '#amico-10',
+        immagine: "img/avatar_10.png",
+        nome: 'Charlie'
+    },
+
+];
+
+for (var i = 0; i < amici.length; i++) {
+    var amicoPush = utenteTemplate(amici[i]);
+    $('.users-contact').append(amicoPush);
 }
-var pushAmico = utenteTemplate(amico1);
-$('#contact-1').append(pushAmico);
-
-var amico2 = {                          // -- 2° amico --
-    immagine: "img/avatar_2.png",
-    nome: 'Bubu'
-}
-var pushAmico = utenteTemplate(amico2);
-$('#contact-2').append(pushAmico);
-
-var amico3 = {                          // -- 3° amico --
-    immagine: "img/avatar_3.png",
-    nome: 'Claudia'
-}
-var pushAmico = utenteTemplate(amico3);
-$('#contact-3').append(pushAmico);
-
-var amico4 = {                          // -- 4° amico --
-    immagine: "img/avatar_4.png",
-    nome: 'Alex P.'
-}
-var pushAmico = utenteTemplate(amico4);
-$('#contact-4').append(pushAmico);
-
-var amico5 = {                          // -- 5° amico --
-    immagine: "img/avatar_5.png",
-    nome: 'Edoardo L.'
-}
-var pushAmico = utenteTemplate(amico5);
-$('#contact-5').append(pushAmico);
-
-var amico6 = {                          // -- 6° amico --
-    immagine: "img/avatar_6.png",
-    nome: 'Cristina'
-}
-var pushAmico = utenteTemplate(amico6);
-$('#contact-6').append(pushAmico);
-
-var amico7 = {                          // -- 7° amico --
-    immagine: "img/avatar_7.png",
-    nome: 'Beppe'
-}
-var pushAmico = utenteTemplate(amico7);
-$('#contact-7').append(pushAmico);
-
-var amico8 = {                          // -- 8° amico --
-    immagine: "img/avatar_8.png",
-    nome: 'Paolo B.'
-}
-var pushAmico = utenteTemplate(amico8);
-$('#contact-8').append(pushAmico);
-
-var amico9 = {                          // -- 9° amico --
-    immagine: "img/avatar_9.png",
-    nome: 'Alice F.'
-}
-var pushAmico = utenteTemplate(amico9);
-$('#contact-9').append(pushAmico);
-
-var amico10 = {                         // -- 10° amico --
-    immagine: "img/avatar_10.png",
-    nome: 'Charlie'
-}
-var pushAmico = utenteTemplate(amico10);
-$('#contact-10').append(pushAmico);
-
-
 
 $('#cerca-contatti').keyup(function(event){
     var filtro = $(this).val().toLowerCase();

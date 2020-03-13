@@ -34,38 +34,20 @@
                         <i class="fas fa-search"></i>
                         <input id="cerca-contatti" placeholder="Cerca contatti">
                 </div>
+                
                 <!-- ====CONTATTI RIPULITI (AD OGNUNO IL SUO TEMPLATE UNICO CUSTOMIZZATO IN JS)=====-->
-                <div class="users-contact">
-                    <div id="contact-1" class="utente" data-chat="#amico-1"></div>
-
-                    <div id="contact-2" class="utente" data-chat="#amico-2"></div>
-
-                    <div id="contact-3" class="utente" data-chat="#amico-3"></div>
-
-                    <div id="contact-4" class="utente" data-chat="#amico-4"></div>
-
-                    <div id="contact-5" class="utente" data-chat="#amico-5"></div>
-
-                    <div id="contact-6" class="utente" data-chat="#amico-6"></div>
-
-                    <div id="contact-7" class="utente" data-chat="#amico-7"></div>
-
-                    <div id="contact-8" class="utente" data-chat="#amico-8"></div>
-
-                    <div id="contact-9" class="utente" data-chat="#amico-9"></div>
-
-                    <div id="contact-10" class="utente" data-chat="#amico-10"></div>
-                </div>
-            </div>
+                <div class="users-contact"></div></div>
 
             <!-- ==TEMPLATE UNICO PER INSERIMENTO UTENTE -->
             <script id="user-template" type="text/x-handlebars-template">
-                <img src={{immagine}} alt="">
-                <div class="text-user">
-                    <h3>{{nome}}</h3>
-                    <p>Non poteva essere altrimenti</p>
+                <div class="utente" data-chat="{{amico}}">
+                    <img src={{immagine}} alt="">
+                    <div class="text-user">
+                        <h3>{{nome}}</h3>
+                        <p>Non poteva essere altrimenti</p>
+                    </div>
+                    <time class="users-contact-time">13:00</time>
                 </div>
-                <time class="users-contact-time">13:00</time>
             </script>
 
             <!-- ===COLONNA DESTRA=== -->
